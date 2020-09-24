@@ -10,7 +10,7 @@ public class Kosinski_VTipper {
 
     /*  Scott Kosinski
      *  ITDEV-110-004
-     *  Assignment #3
+     *  Assignment #4
      */
     
     public static void main(String[] args) {
