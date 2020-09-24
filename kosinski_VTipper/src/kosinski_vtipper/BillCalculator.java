@@ -25,7 +25,7 @@ public class BillCalculator {
 
     BillCalculator(){
         intro();
-        while (runAgain == true) { 
+        while (runAgain) { 
             getUserInput();
             tipCalc();
             totalBill();
@@ -50,8 +50,8 @@ public class BillCalculator {
     
     private void getUserInput(){
         /*
-         *  This method executes after the introMessage. It asks the user
-         *  for the input described in the introMessage.
+         *  This method executes after the intro. It asks the user
+         *  for the input described in the intro.
          */
         System.out.println("Enter the name of the restaurant: ");
         restaurantName = input.nextLine();
@@ -94,12 +94,12 @@ public class BillCalculator {
          *  result of the tipCalc method and prints the information to the
          *  console in a readable format.
          */
-        System.out.println("\nRestaurant Name: "+restaurantName+"\n\nCurrent time: "
+        System.out.println("\nRestaurant Name: "+restaurantName+"\n\nTime & Date: "
                 +java.time.LocalTime.now().format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))
-                +"\nCurrent date: "
+                +" "
                 +java.time.LocalDate.now().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT))
                 +"\n\nBill sub total: $"+dollarFormat.format(billSubTotal)+"\n"
-                + "Tip amount: $"+dollarFormat.format(tipAmount)+"\nTip %: "+tipPercent+"%"+"\nBill total: $"
+                + "Tip amount: $"+dollarFormat.format(tipAmount)+"\nTip %: "+tipPercent+"\nBill total: $"
                 +dollarFormat.format(billTotal)+"\n\nSplit # of ways: "+numSplit
                 +"\nSplit check total: $"+dollarFormat.format(splitAmount)+"\n");
     }
@@ -110,7 +110,7 @@ public class BillCalculator {
          *  calculation.
          */
         boolean bool = true;
-        while (bool == true){
+        while (bool){
             System.out.println("Calculate again? (1)yes or (2)no: ");
             repeatCode = input.nextInt();
             if (repeatCode == 1){
