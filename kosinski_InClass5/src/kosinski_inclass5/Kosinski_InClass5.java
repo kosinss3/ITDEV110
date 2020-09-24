@@ -16,7 +16,8 @@ public class Kosinski_InClass5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        UserInput myScore = new UserInput();
+        UserInput myInput = new UserInput();
+        UserOutput myOutput = new UserOutput();
     }
     
 }

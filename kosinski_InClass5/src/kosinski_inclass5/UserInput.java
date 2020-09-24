@@ -17,11 +17,12 @@ public class UserInput {
     private String intro = "\nWelcome! This program will calculate and display "
             + "the total and average score of 3 bowling games.";
     //creates game variables and intitializes them to an invalid value
-    int game1 = -1, game2 = -1, game3 = -1;
+    int game1, game2, game3;
     //object constructor
     UserInput(){
         intro();
         inputScores();
+        //displayInput();
     }
     //prints the default intro
     private void intro(){
@@ -47,4 +48,5 @@ public class UserInput {
         }
         while(game3<0||game3>300);
     }
+
 }
