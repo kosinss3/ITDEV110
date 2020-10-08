@@ -2,7 +2,6 @@
  *  ITDEV-110-004
  *  Assignment #4
  */
-
 package kosinski_insertfunapp;
 
 /**

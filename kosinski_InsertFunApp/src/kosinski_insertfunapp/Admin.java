@@ -2,7 +2,6 @@
  *  ITDEV-110-004
  *  Assignment #4
  */
-
 package kosinski_insertfunapp;
 
 /**
@@ -20,6 +19,5 @@ public class Admin {
     // Shutdown message
     public void shutdown() {
         System.out.println("\n\n\t\tThanks for playing! Goodbye.\n\n");
-    }    
-    
+    }        
 }

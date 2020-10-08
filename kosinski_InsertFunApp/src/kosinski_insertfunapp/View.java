@@ -2,7 +2,6 @@
  *  ITDEV-110-004
  *  Assignment #4
  */
-
 package kosinski_insertfunapp;
 import java.util.Scanner;
 
@@ -12,8 +11,7 @@ import java.util.Scanner;
  */
 public class View {
     
-    // Declarations
-    
+    // Declarations    
     final String textBody[] = {"\nMary had a little ", ". Its ", " was ", 
         " as ", ". Everywhere that Mary ", ". The ", " was sure to ", "."};
     final String blanks[] = {"animal", "body part", "color", "food", 
@@ -27,8 +25,7 @@ public class View {
         System.out.println("Enter a(n) "+ blanks[i]+": ");
         return input.nextLine();
     }
-    
-    
+        
     // Method to display the final poem with user words
     public void displayResult(String userWords[]) {
         for (int i = 0; i < (textBody.length-1); i++){
