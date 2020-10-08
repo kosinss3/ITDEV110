@@ -13,8 +13,12 @@ package kosinski_insertfunapp;
 public class Kosinski_InsertFunApp {
 
     public static void main(String[] args) {
-        Admin admin = new Admin();
-        admin.intro();
+
+        // Instantiate new controller object
+        Controller controller = new Controller();
+        
+        // Run the program
+        controller.run();
     }
     
 }
