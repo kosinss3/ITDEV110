@@ -12,6 +12,8 @@ public class Kosinski_MidTerm {
 
     public static void main(String[] args) {
         Controller controller = new Controller();
+        
+        controller.run();
     }
     
 }
