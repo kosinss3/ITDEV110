@@ -10,26 +10,32 @@ package kosinski_midterm;
  */
 public class Model {
     
+    //  Declare private variables to store score data
     private int counter = 0;
     private double newEntry;
     private double scoreSum;
     private double scoreAvg;
     private double[] scores;
-
-    public double[] getScores() {
-        return scores;
-    }
-
-    public void setScores(int size) {
-        this.scores = new double[size];
-    }
     
+    //  Getters and setters for private variables
     public int getCounter() {
         return counter;
     }
 
     public void setCounter() {
         counter++;
+    }
+    
+    public void setScores(int length) {
+        scores = new double[length];
+    }
+
+    public double[] getScores() {
+        return scores;
+    }
+    
+    public double[] getSingle() {
+        return scores;
     }
 
     public double getNewEntry() {

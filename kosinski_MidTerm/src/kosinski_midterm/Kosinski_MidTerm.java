@@ -11,8 +11,11 @@ package kosinski_midterm;
 public class Kosinski_MidTerm {
 
     public static void main(String[] args) {
+        
+        //  Instantiate new controller object
         Controller controller = new Controller();
         
+        //  Execute the controller's run method to run the program
         controller.run();
     }
     
