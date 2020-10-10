@@ -64,7 +64,7 @@ public class Model {
     }
 
     public void setScoreSum(double newEntry) {
-        this.scoreSum = scoreSum + newEntry;
+        this.scoreSum += newEntry;
     }
 
     public void setScores(int counter, double newEntry) {

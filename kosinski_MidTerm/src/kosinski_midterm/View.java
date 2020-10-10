@@ -58,7 +58,9 @@ public class View {
     
     public void userQuit() {
         System.out.println("");
-        System.out.println("You quit the program!");
+        System.out.println("\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!! You quit the program! !!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("\t\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         System.out.println("");
     }
     
@@ -82,10 +84,10 @@ public class View {
     
     //  Displays the final results
     public void dispalyFinal(int getCounter, double scoreAvg){
-        System.out.println("\t\t**************************************************************************");
-        System.out.println("\t\t\tYou entered "+getCounter+" scores.");
-        System.out.println("\t\t\tThe final average is: "+scoreAvg);
-        System.out.println("\t\t**************************************************************************\n");
+        System.out.println("\t\t*******************************************************************************");
+        System.out.println("\t\t                            You entered "+getCounter+" scores.");
+        System.out.println("\t\t                            The final average is: "+scoreAvg);
+        System.out.println("\t\t*******************************************************************************\n");
     }
     
     //  Extra credit
