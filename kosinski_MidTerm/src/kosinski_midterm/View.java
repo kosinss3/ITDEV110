@@ -21,17 +21,21 @@ public class View {
     
     public void instructions(){
         //  make this method callable during the program to get help
-        System.out.println("\t\t**************************************************************************");
-        System.out.println("\t\tThis program will calculate the average of the scores entered by the user,");
-        System.out.println("\t\tand then display the average to the console.");
-        System.out.println("");
-        System.out.println("\t\tStep 1: Enter number of scores to be entered.");
-        System.out.println("\t\tStep 1.5: Display extra credit?");
-        System.out.println("\t\tStep 2: Enter a score and press return.");
-        System.out.println("\t\tStep 3: When you've entered all scores, the final result will be displayed.");
-        System.out.println("");
-        System.out.println("\t\t\tEnter score of -1 to quit.");
-        System.out.println("\t\t**************************************************************************\n");
+        System.out.println("\t\t*******************************************************************************");
+        System.out.println("\t\t| This program will calculate the average of the scores entered by the user,  |");
+        System.out.println("\t\t| and then display the average to the console.                                |");
+        System.out.println("\t\t|                                                                             |");
+        System.out.println("\t\t| Step 1: Enter number of scores to be entered.                               |");
+        System.out.println("\t\t| Step 1.5: Display extra credit?                                             |");
+        System.out.println("\t\t| Step 2: Enter a score 0.0-100.0 and press return.                           |");
+        System.out.println("\t\t| Step 3: When you've entered all scores, the final result will be displayed. |");
+        System.out.println("\t\t| Step 4: Choose to close or rerun the program.                               |");
+        System.out.println("\t\t|                                                                             |");
+        System.out.println("\t\t| If you don't know how many scores you will enter, enter 999999 and          |");
+        System.out.println("\t\t| then enter a score of -1 when finished.                                     |");
+        System.out.println("\t\t|                                                                             |");
+        System.out.println("\t\t|        Enter score of -1 to quit, or -2 to toggle extra credit.             |");
+        System.out.println("\t\t*******************************************************************************\n");
     }
     
     //  Method used to determine how many scores the user will input
@@ -42,6 +46,7 @@ public class View {
             size = input.nextInt();
             System.out.println("");
         } while (size < 1);
+        //System.out.println(size);
         return size;
     }
     
@@ -86,6 +91,8 @@ public class View {
     //  Extra credit
     public void extraCredit(int counter, int arrayLength, double[] getSingle, double sum){
         System.out.print("\n\t*** Scores entered: ");
+        
+        //  Loop through the model.scores array and display to console
         for (int i = 0; i < counter; i++) {
             if (i > 0 && i < arrayLength){
                 System.out.print("+ ");
@@ -93,6 +100,12 @@ public class View {
             System.out.print(getSingle[i]+" ");
         }
         System.out.print("= "+sum);
+        System.out.println("");
+    }
+    
+    public void toggleEC() {
+        System.out.println("");
+        System.out.println("\t*** Extra credit toggled!");
         System.out.println("");
     }
     
