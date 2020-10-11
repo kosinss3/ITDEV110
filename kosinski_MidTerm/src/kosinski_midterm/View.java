@@ -22,8 +22,8 @@ public class View {
     public void instructions(){
         //  make this method callable during the program to get help
         System.out.println("\t\t*******************************************************************************");
-        System.out.println("\t\t| This program will calculate the average of the scores entered by the user,  |");
-        System.out.println("\t\t| and then display the average to the console.                                |");
+        System.out.println("\t\t| This application will calculate the average of the scores entered by the    |");
+        System.out.println("\t\t| user, and then display the average to the console.                          |");
         System.out.println("\t\t|                                                                             |");
         System.out.println("\t\t| Step 1: Enter number of scores to be entered.                               |");
         System.out.println("\t\t| Step 1.5: Display extra credit?                                             |");
@@ -116,7 +116,7 @@ public class View {
         
         int s;
         do {
-            System.out.print("Rerun program? (1)yes or (0)no: ");
+            System.out.print("Rerun application? (1)yes or (0)no: ");
             s = input.nextInt();
         } while (s < 0 || s > 1);
         System.out.println("");
@@ -137,6 +137,6 @@ public class View {
     
     //  Display shutdown message
     public void shutdown(){
-        System.out.println("\n\nThank you and goodnight.\n");
+        System.out.println("\n\nApplication terminated.\n");
     }
 }
