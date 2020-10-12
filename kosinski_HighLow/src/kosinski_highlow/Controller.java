@@ -15,6 +15,8 @@ public class Controller {
     
     public void go() {
         
+        view.intro();
+
         do {
             //  Sets run condition
             model.setRun(1);
@@ -24,6 +26,8 @@ public class Controller {
             model.setMaxValue(view.userMax());
             
             //  Checks for debug condition
+            //  Set min value, max value, and guess to the same number
+            //  to toggle debugging mode.
             if (model.getMinValue() == model.getMaxValue()) {
                 model.setDebug();
             }
@@ -31,8 +35,9 @@ public class Controller {
             //  Calculates range based on user min and max
             model.setRange(model.getMinValue(), model.getMaxValue());
             
-            //  Sets the number
+            //  Sets the number and displays numberChosen message
             model.setTheNumber(model.getRange(), model.getMinValue(), model.getMaxValue());
+            view.numberChosen(model.getMinValue(), model.getMaxValue());
             
             do {
                 //  Get a guess from the user
@@ -42,22 +47,34 @@ public class Controller {
                 switch (model.checkTheGuess(model.getTheNumber(), model.getTheGuess())) {
                     case 0:
                         model.setCounter();
-                        view.tooLow();
+                        view.tooLow(model.getTheGuess());
                         break;
                     case 1:
                         model.setCounter();
-                        view.correct(model.getCounter());
+                        view.correct(model.getCounter(), model.getTheNumber());
                         model.setRun(0);
                         break;
                     case 2:
                         model.setCounter();
-                        view.tooHigh();
+                        view.tooHigh(model.getTheGuess());
                         break;
                 }
                 
                 if (model.isDebug() == true) {
                     //  Debugging
                     view.debug(model.getTheNumber(), model.getTheGuess(), model.getMaxValue(), model.getMinValue(), model.getRange(), model.getCounter());
+                }
+                
+                //  Ask the user if they would like to guess again
+                if (model.checkTheGuess(model.getTheNumber(), model.getTheGuess()) != 1) {
+                    do {
+                        model.setGuessAgain(view.guessAgain());
+                    } while (model.getGuessAgain() < 0 || model.getGuessAgain() > 1);
+
+                    if (model.getGuessAgain() == 0) {
+                        view.giveUp(model.getCounter(), model.getTheNumber());
+                        break;
+                    }
                 }
                 
             } while (model.checkTheGuess(model.getTheNumber(), model.getTheGuess()) != 1);

@@ -21,6 +21,7 @@ public class Model {
     private int theNumber;
     private int theGuess;
     private int counter = 0;
+    private int guessAgain;
     private boolean debug = false;
     
     public int getRun() {
@@ -104,6 +105,16 @@ public class Model {
     public void resetCouter() {
         this.counter = 0;
     }
+
+    public int getGuessAgain() {
+        return guessAgain;
+    }
+
+    public void setGuessAgain(int guessAgain) {
+        this.guessAgain = guessAgain;
+    }
+    
+
 
     public boolean isDebug() {
         return debug;
