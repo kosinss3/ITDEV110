@@ -39,7 +39,7 @@ public class Model {
         counter++;
     }
     
-    public void setScores(int length) {
+    public void setScoresLength(int length) {
         scores = new double[length];
     }
 

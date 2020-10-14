@@ -21,7 +21,7 @@ public class Controller {
         view.instructions();
         do {            
             //  Get user input to determine how many scores will be entered
-            model.setScores(view.arraySize());
+            model.setScoresLength(view.arraySize());
             
             //  Get user input to determine if extra credit should be displayed
             model.setExCred(view.displayExtraCredit());
@@ -63,17 +63,17 @@ public class Controller {
                     model.setScoreSum(model.getNewEntry());
                     model.setScoreAvg();
                     
-                    // Display last user entry
+                    // Display last user entry if extra credit is off
                     if (model.getExCred() == 0) {
                         view.displayEntry(model.getNewEntry());
                     }
                     
-                    //  Display extra credit: all user entries
+                    //  Display all user entries if extra credit is on
                     if (model.getExCred() == 1){
                         view.extraCredit(model.getCounter(), model.getScores().length, model.getSingle(), model.getScoreSum());
                     }
                     
-                    //  Display running totals totals
+                    //  Display running totals
                     view.displayResults(model.getCounter(), model.getScoreAvg(), model.getScores().length);
 
 
